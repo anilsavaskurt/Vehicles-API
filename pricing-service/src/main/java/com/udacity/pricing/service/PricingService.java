@@ -30,10 +30,6 @@ public class PricingService {
      */
     public static Price getPrice(Long vehicleId) throws PriceException {
 
-        if (!PRICES.containsKey(vehicleId)) {
-            throw new PriceException("Cannot find price for Vehicle " + vehicleId);
-        }
-
         return PRICES.get(vehicleId);
     }
 
